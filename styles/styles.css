@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body {
+	height: 100%;
+}
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+textarea {
+	display: block;
+	width: 400px;
+	height: 260px;
+	margin: 0 auto;
+}
+label {
+	margin: 1em;
+}
+fieldset {
+	margin-bottom: 30px;
+}
+
+#container {
+	margin: 0 auto;
+	width: 800px;
+	height: 100%;
+}
+.mainColumn {
+	float:left;
+	width: 450px;
+}
+.optionsColumn {
+	float:right;
+	width: 350px;
+	height: 100%;
+	background-color: #FFE;
+}
+.buttonsBar {
+	padding: 2em;
+	text-align: center;
+}
+.buttonsBar button {
+	margin-right: 2em;
+}

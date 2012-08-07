@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <title>Brainfuck</title>
+    <script src="js/bfint.js"></script>
+    <script src="js/bfc.js"></script>
+    <script src="js/bfvm.js"></script>
+</head>
+
+<body>
+<div id="container">
+  <div class="mainColumn">
+    <div>
+      <label> Input:
+        <textarea id="input" wrap="soft">
+			</textarea>
+      </label>
+    </div>
+    <div class="buttonsBar">
+      <button type="button" id="compileButton"> Compile </button>
+      <button type="button" id="runButton"> Run </button>
+    </div>
+    <div>
+      <label> Output:
+        <textarea id="output" wrap="soft">
+			</textarea>
+      </label>
+    </div>
+  </div>
+  <div class="optionsColumn">
+    <fieldset>
+      <legend>Параметры компиляции</legend>
+      <input type="checkbox" id="optimize" checked="checked" />
+      Оптимизировать
+    </fieldset>
+    <fieldset>
+      <legend>Во что компилировать</legend>
+      <div>
+        <input type="radio" name="compileTo" id="bfil" checked="checked" />
+        BFIL</div>
+      <div>
+        <input type="radio" name="compileTo" id="js" />
+        JS</div>
+    </fieldset>
+    <fieldset>
+      <legend>Чем выполнить</legend>
+      <div>
+        <input type="radio" name="run" id="bfvm" checked="checked" />
+        Виртуальной машиной</div>
+      <div>
+        <input type="radio" name="run" id="nativeJS" />
+        Native JS</div>
+      <div>
+        <input type="radio" name="run" id="interpreter" />
+        Интерпретатором</div>
+    </fieldset>
+  </div>
+</div>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script> 
+<script src="js/behaviour.js" type="text/javascript"> </script>
+</body>
+</html>
