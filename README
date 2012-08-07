@@ -1,5 +1,1 @@
-Main goal of the project is to create a fast, flexible and extensible Javascript runtime for Brainfuck esoteric programming language.
-
-Why Brainfuck? Just for fun; and also because i've not found anything well-written and documented. Everything about BF except programs on the language itself really lacks some beauty - so i decided to do it.
-
-Why Javascript? Because i love it; and also because it allows making a client-side web app, which is entirely cross-platform and easily accessible from everywhere.
+This is a just-for fun JS implementation of Brainfuck runtime like it was a big serious language - with virtual machine, intermediate lang, optimization and so on. Not finished yet (tons of improvements to be done), but already working faster than any other javascript interpreter :)
