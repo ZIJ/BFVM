@@ -1,1 +1,1 @@
-This is a just-for fun JS implementation of Brainfuck runtime like it was a big serious language - with virtual machine, intermediate lang, optimization and so on. Not finished yet (tons of improvements to be done), but already working faster than any other javascript interpreter :)
+This is a just-for-fun JS implementation of Brainfuck runtime like it was a big serious language - with virtual machine, intermediate lang, optimization and so on. Not finished yet (tons of improvements to be done), but already working faster than any other javascript interpreter :)
