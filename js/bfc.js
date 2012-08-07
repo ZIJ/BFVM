@@ -6,6 +6,11 @@
  * To change this template use File | Settings | File Templates.
  */
 
+/**
+ * Creates node of an Abstract Syntax Tree
+ * @param type
+ * @constructor
+ */
 function ASTreeNode(type) {
 
     var children = [];
@@ -34,6 +39,11 @@ function ASTreeNode(type) {
     };
 }
 
+/**
+ * Creates Abstract Syntax Tree
+ * @param byteArr
+ * @constructor
+ */
 function ASTree(byteArr) {
     var root = new ASTreeNode(0);
 
@@ -54,7 +64,10 @@ function ASTree(byteArr) {
         }
     }
 }
-
+/**
+ * Instantiates a new BF Compiler
+ * @constructor
+ */
 function BFC() {
     // chars-to-bytecodes mapping
     var codeMap = {
@@ -63,7 +76,13 @@ function BFC() {
         '.': 5, ',': 6,     // I/O
         '[': 7, ']': 8      // looping
     };
-
+    /**
+     * Compiles BF do a desired output
+     * @param codeStr Brainfuck code
+     * @param options  settings
+     * @return {*}
+     * @constructor
+     */
     this.Compile = function(codeStr, options) {
         // options
         var output = 'bytecode';
@@ -87,7 +106,12 @@ function BFC() {
             return this.ToJs(bytecode);
         }
     };
-
+    /**
+     * Converts bytecode to JavaScript
+     * @param byteArr
+     * @return {String}
+     * @constructor
+     */
     this.ToJs = function(byteArr) {
         var js = 'var t=new Array(30000);var p=0;'
                 +'for(var i=0;i<30000;i++)t[i]=0;'
@@ -109,7 +133,9 @@ function BFC() {
 
     };
 
-    // transforms source code to bytecode array
+    /**
+     * Transforms source code to bytecode array
+     */
     this.Parse = function(codeStr) {
         var result = [];
         if (codeStr && codeStr.length > 0) {

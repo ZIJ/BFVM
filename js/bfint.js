@@ -6,12 +6,21 @@
  * To change this template use File | Settings | File Templates.
  */
 
+/**
+ * Plain old Braifuck interpreter
+ * @param size
+ * @constructor
+ */
 function BFInt(size) {
 
     var data = new Array(size);                                 // data tape
     for (var i = 0; i < data.length; i++)
         data[i] = 0;
-
+    /**
+     * Executes BF code and passes input string to it
+     * @param codeStr
+     * @param inputStr
+     */
     this.run = function(codeStr, inputStr) {                    // executive function
 
         var code = toOpCodes(codeStr);                          // instruction tape
@@ -90,7 +99,11 @@ function BFInt(size) {
 
     };
 
-    // makes an array of opcodes from code string
+    /**
+     * makes an array of opcodes from code string
+     * @param codeStr
+     * @return {Array}
+     */
     function toOpCodes(codeStr) {
         var transform = {
             '>': 0, '<': 1,     // movement
@@ -110,7 +123,11 @@ function BFInt(size) {
         return result;
     }
 
-    // makes an array of charcodes from string
+    /**
+     * Makes an array of charcodes from string
+     * @param str
+     * @return {Array}
+     */
     function toCharCodes(str) {
         var result = [];
         if (str && str != '') {

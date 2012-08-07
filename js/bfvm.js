@@ -5,6 +5,14 @@
  * Time: 19:39
  * To change this template use File | Settings | File Templates.
  */
+/**
+ * Creates a Command instance
+ * @param id Command identifier
+ * @param name Command name
+ * @param paramsCount Amount of optional parameters
+ * @param func Callback to execute
+ * @constructor
+ */
 function Command(id, name, paramsCount, func) {
     // validating params
     if (typeof(id) !== 'number') {
@@ -33,7 +41,10 @@ function Command(id, name, paramsCount, func) {
         };
     }
 }
-
+/**
+ * Creates empty collection of commands
+ * @constructor
+ */
 function CommandSet() {
     var commands = [];
     var nameIdMap = {};
@@ -70,7 +81,11 @@ function CommandSet() {
         return commands[nameIdMap[name]];
     };
 }
-
+/**
+ * Instantiates Brain Fuck Virtual Machine
+ * @param options VM settings
+ * @constructor
+ */
 function BFVM(options) {
 
     // options
